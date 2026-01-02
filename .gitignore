@@ -1,35 +1,24 @@
-# Dependencies
-node_modules/
-.pnp
-.pnp.js
+# deps
+node_modules
 
-# Testing
-coverage/
+# builds
+dist
+build
+coverage
 
-# Production
-build/
-dist/
+# env / secrets
+.env
+.env.*
+*.pem
+*.key
 
-# Misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# runtime
+tmp
+*.log
 
 # OS
-Thumbs.db
+.DS_Store
+
+# editor
+.vscode
+.idea
