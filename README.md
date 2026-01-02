@@ -15,21 +15,42 @@
 
 ## 🛠 Tecnologie
 
-- **React** - UI Library
-- **Vite** - Build Tool
-- **AI Integration** - Smart note organization
+- **React 19.2** - UI Library
+- **Vite 5.0** - Build Tool & Dev Server
+- **Notion API** - Database per meeting e contatti
+- **OpenAI API** - AI-powered note organization
+- **OCR Integration** - Business card scanning
 
 ## 📦 Installazione
 
 ```bash
 # Clone repository
 git clone https://github.com/ltoe68/buyer-meeting-app.git
+cd buyer-meeting-app
 
 # Installa dipendenze
 npm install
 
+# Configura variabili d'ambiente
+cp .env.example .env
+# Modifica .env con le tue chiavi API
+
 # Avvia dev server
 npm run dev
+```
+
+## 🔑 Configurazione
+
+Crea un file `.env` basato su `.env.example` e configura:
+
+- **NOTION_TOKEN** - Token API Notion per salvare i meeting
+- **NOTION_DATABASE_ID** - ID del database Notion
+- **OPENAI_API_KEY** - Chiave OpenAI per AI features
+- **SESSION_SECRET** - Secret per sessioni (genera random)
+
+```bash
+# Genera un session secret sicuro
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
 ## 📝 Utilizzo
